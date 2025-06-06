@@ -5,6 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 import static org.testng.Assert.assertTrue;
 public class WebpageTest {
@@ -12,9 +13,12 @@ public class WebpageTest {
 
     @BeforeTest
     public void openBrowser() throws InterruptedException {
-        WebDriverManager.chromedriver().setup(); // Automatically downloads correct ChromeDriver
+        WebDriverManager.chromedriver().setup();
+        WebDriver driver = new ChromeDriver();
+
+     //   WebDriverManager.chromedriver().setup(); // Automatically downloads correct ChromeDriver
        //  driver = new ChromeDriver();
-      WebDriver driver = new ChromeDriver();
+    //  WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         Thread.sleep(2000);
         driver.get("https://sauravsarkar-codersarcade.github.io/DevOps-VTU-MVN/");
