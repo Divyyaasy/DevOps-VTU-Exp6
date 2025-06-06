@@ -12,7 +12,9 @@ public class WebpageTest {
 
     @BeforeTest
     public void openBrowser() throws InterruptedException {
-        driver = new ChromeDriver();
+        WebDriverManager.chromedriver().setup(); // Automatically downloads correct ChromeDriver
+       //  driver = new ChromeDriver();
+      WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         Thread.sleep(2000);
         driver.get("https://sauravsarkar-codersarcade.github.io/DevOps-VTU-MVN/");
