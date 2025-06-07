@@ -18,6 +18,7 @@ public class WebpageTest {
     @BeforeClass
     public void setupBrowser() {
         io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "C:\webdriver\chrome-win64\chrome.exe");
         driver = new ChromeDriver();
         driver.get("https://codersarcade.com");
     }
