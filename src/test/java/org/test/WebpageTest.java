@@ -6,11 +6,21 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.*;
 
 import static org.testng.Assert.assertTrue;
 public class WebpageTest {
-    private static WebDriver driver;
+    public WebDriver driver;
+  //  private static WebDriver driver;
 
+    @BeforeClass
+    public void setupBrowser() {
+        io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
+        driver.get("https://www.example.com");
+    }
     @BeforeTest
     public void openBrowser() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
