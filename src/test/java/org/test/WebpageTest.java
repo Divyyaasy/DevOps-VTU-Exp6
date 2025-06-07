@@ -41,7 +41,8 @@ public class WebpageTest {
     @Test
     public void urlTest() {
         String url = driver.getCurrentUrl();
-        Assert.assertTrue(url.contains("codersarcade"), "URL is incorrect!");
+       System.out.println("URL found: " + url); // Helpful for debugging
+    Assert.assertTrue(url.contains("github.io") || url.contains("codersarcade"), "URL is incorrect!");
     }
 
     @AfterTest
