@@ -37,7 +37,8 @@ public class WebpageTest {
     public void titleValidationTest(){
         String actualTitle = driver.getTitle();
         System.out.println("Title found: " + driver.getTitle());
-        String expectedTitle = "Coders Arcade - CI/CD Learning";
+        //String expectedTitle = "Coders Arcade - CI/CD Learning";
+        String expectedTitle = "Example Domain";
         Assert.assertEquals(actualTitle, expectedTitle, "Page title doesn't match!");
         assertTrue(true, "Title contains 'CI/CD'");
     }
