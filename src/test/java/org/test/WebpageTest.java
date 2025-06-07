@@ -13,8 +13,9 @@ public class WebpageTest {
 
     @BeforeClass
     public void setupBrowser() {
-        WebDriverManager.chromedriver().setup();
-        System.setProperty("webdriver.chrome.driver", System.getenv("WEBDRIVER_CHROME_DRIVER"));
+       // WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().driverVersion("137.0.7151.69").setup();
+        //System.setProperty("webdriver.chrome.driver", System.getenv("WEBDRIVER_CHROME_DRIVER"));
         driver = new ChromeDriver();
         driver.get("https://codersarcade.com");
     }
