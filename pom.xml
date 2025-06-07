@@ -103,9 +103,10 @@
 </dependency>
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-devtools-vXXX</artifactId> <!-- vXXX matching Chrome major version -->
-    <version>4.20.0</version> <!-- match your selenium version -->
+    <artifactId>selenium-devtools-v137</artifactId>
+    <version>4.31.0</version> <!-- use your Selenium version -->
 </dependency>
+
 
         <dependency>
             <groupId>org.testng</groupId>
