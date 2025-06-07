@@ -19,7 +19,7 @@ public class WebpageTest {
     public void setupBrowser() {
         io.github.bonigarcia.wdm.WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("https://www.example.com");
+        driver.get("https://codersarcade.com");
     }
     @BeforeTest
     public void openBrowser() throws InterruptedException {
@@ -36,9 +36,9 @@ public class WebpageTest {
     @Test
     public void titleValidationTest(){
         String actualTitle = driver.getTitle();
-        System.out.println(actualTitle);
+        System.out.println("Title found: " + driver.getTitle());
         String expectedTitle = "Coders Arcade - CI/CD Learning";
-        Assert.assertEquals(actualTitle, expectedTitle);
+        Assert.assertEquals(actualTitle, expectedTitle, "Page title doesn't match!");
         assertTrue(true, "Title contains 'CI/CD'");
     }
     @AfterTest
