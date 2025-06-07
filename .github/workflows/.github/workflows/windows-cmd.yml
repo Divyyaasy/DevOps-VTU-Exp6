@@ -1,0 +1,22 @@
+name: Run CMD on Windows
+
+on:
+  push:
+    branches: [ "main" ]  # or "master" or any branch you want
+  workflow_dispatch:      # this allows manual trigger from GitHub
+
+jobs:
+  run-cmd:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Run a CMD command
+      run: |
+        echo Hello from CMD
+        dir
+        echo Current directory is %cd%
+        echo Listing files done.
+      shell: cmd
